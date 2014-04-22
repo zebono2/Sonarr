@@ -52,7 +52,6 @@ define(
                             return model.get('quality').quality.weight;
                         }
                     },
-
                     {
                         name : 'rejections',
                         label: '',

@@ -357,6 +357,10 @@
     <Compile Include="MediaCover\MediaCoversUpdatedEvent.cs" />
     <Compile Include="MediaFiles\Commands\RenameFilesCommand.cs" />
     <Compile Include="MediaFiles\EpisodeFileMoveResult.cs" />
+    <Compile Include="MediaFiles\EpisodeImport\DroneFactory\DroneFactoryService.cs" />
+    <Compile Include="MediaFiles\EpisodeImport\DroneFactory\File.cs" />
+    <Compile Include="MediaFiles\EpisodeImport\DroneFactory\Folder.cs" />
+    <Compile Include="MediaFiles\EpisodeImport\DroneFactory\DroneFactoryItemBase.cs" />
     <Compile Include="MediaFiles\EpisodeImport\SampleService.cs" />
     <Compile Include="MediaFiles\EpisodeImport\Specifications\FullSeasonSpecification.cs" />
     <Compile Include="MediaFiles\Events\SeriesScannedEvent.cs" />

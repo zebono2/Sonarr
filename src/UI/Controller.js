@@ -13,7 +13,8 @@ define(
         'System/SystemLayout',
         'SeasonPass/SeasonPassLayout',
         'System/Update/UpdateLayout',
-        'Series/Editor/SeriesEditorLayout'
+        'Series/Editor/SeriesEditorLayout',
+        'EpisodeFiles/Import/EpisodeFileImportLayout'
     ], function (NzbDroneController,
                  AppLayout,
                  Marionette,
@@ -26,7 +27,8 @@ define(
                  SystemLayout,
                  SeasonPassLayout,
                  UpdateLayout,
-                 SeriesEditorLayout) {
+                 SeriesEditorLayout,
+                 EpisodeFileImportLayout) {
         return NzbDroneController.extend({
 
             addSeries: function (action) {
@@ -79,8 +81,12 @@ define(
             seriesEditor: function () {
                 this.setTitle('Series Editor');
                 this.showMainRegion(new SeriesEditorLayout());
-            }
+            },
 
+            importFiles: function () {
+                this.setTitle('Import Files');
+                this.showMainRegion(new EpisodeFileImportLayout());
+            }
         });
     });
 

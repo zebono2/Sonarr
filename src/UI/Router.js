@@ -23,6 +23,7 @@ define(
                 'system/:action'            : 'system',
                 'seasonpass'                : 'seasonPass',
                 'serieseditor'              : 'seriesEditor',
+                'import'                    : 'importFiles',
                 ':whatever'                 : 'showNotFound'
             }
         });

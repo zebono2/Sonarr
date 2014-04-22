@@ -10,8 +10,17 @@ define(
             className: 'file-size-cell',
 
             render: function () {
-                var size = this.model.get(this.column.get('name'));
-                this.$el.html(FormatHelpers.bytes(size));
+                var name = this.column.get('name');
+
+                if (this.model.has(name)) {
+                    var size = this.model.get(name);
+                    this.$el.html(FormatHelpers.bytes(size));
+                }
+
+                else {
+                    this.$el.html('-');
+                }
+
                 this.delegateEvents();
                 return this;
             }

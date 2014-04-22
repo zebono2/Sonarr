@@ -118,6 +118,8 @@
     <Compile Include="Directories\DirectoryLookupService.cs" />
     <Compile Include="Directories\DirectoryModule.cs" />
     <Compile Include="Episodes\EpisodeModuleWithSignalR.cs" />
+    <Compile Include="EpisodeFiles\Import\EpisodeFileImportModule.cs" />
+    <Compile Include="EpisodeFiles\Import\EpisodeFileImportResource.cs" />
     <Compile Include="Episodes\EpisodeModule.cs" />
     <Compile Include="Episodes\EpisodeResource.cs" />
     <Compile Include="Episodes\RenameEpisodeModule.cs" />
@@ -231,7 +233,9 @@
       <Name>NzbDrone.SignalR</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DroneFactory\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

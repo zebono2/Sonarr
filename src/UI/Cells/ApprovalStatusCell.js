@@ -15,7 +15,7 @@ define(
 
                 var rejections = this.model.get(this.column.get('name'));
 
-                if (rejections.length === 0) {
+                if (!rejections || rejections.length === 0) {
                     return this;
                 }
 
@@ -28,7 +28,7 @@ define(
                     content  : html,
                     html     : true,
                     trigger  : 'hover',
-                    title    : 'Release Rejected',
+                    title    : 'Rejection Reasons',
                     placement: 'left',
                     container: this.$el
                 });
