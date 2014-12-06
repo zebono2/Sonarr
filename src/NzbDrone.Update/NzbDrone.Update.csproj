@@ -61,6 +61,7 @@
     <Compile Include="UpdateEngine\InstallUpdateService.cs" />
     <Compile Include="UpdateEngine\StartNzbDrone.cs" />
     <Compile Include="UpdateEngine\TerminateNzbDrone.cs" />
+    <Compile Include="UpdatePreflight\CanWriteTarget.cs" />
     <Compile Include="UpdateStartupContext.cs" />
   </ItemGroup>
   <ItemGroup>
