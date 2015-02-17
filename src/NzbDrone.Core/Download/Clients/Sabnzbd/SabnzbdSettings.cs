@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.Sabnzbd
 {
-    public class SabnzbdSettingsValidator : AbstractValidator<SabnzbdSettings>
+    public class SabnzbdSettingsValidator : NzbDroneValidator<SabnzbdSettings>
     {
         public SabnzbdSettingsValidator()
         {
@@ -24,6 +25,11 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
             RuleFor(c => c.Password).NotEmpty()
                                     .WithMessage("Password is required when API key is not configured")
                                     .When(c => String.IsNullOrWhiteSpace(c.ApiKey));
+
+
+            RuleFor(c => c.TvCategory).NotEmpty()
+                                      .WithMessage("Using a separate category for Sonarr is recommended")
+                                      .AsWarning();
         }
     }
 

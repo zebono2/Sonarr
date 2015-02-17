@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.BroadcastheNet
 {
-    public class BroadcastheNetSettingsValidator : AbstractValidator<BroadcastheNetSettings>
+    public class BroadcastheNetSettingsValidator : NzbDroneValidator<BroadcastheNetSettings>
     {
         public BroadcastheNetSettingsValidator()
         {

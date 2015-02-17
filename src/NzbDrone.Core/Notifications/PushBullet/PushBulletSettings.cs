@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.PushBullet
 {
-    public class PushBulletSettingsValidator : AbstractValidator<PushBulletSettings>
+    public class PushBulletSettingsValidator : NzbDroneValidator<PushBulletSettings>
     {
         public PushBulletSettingsValidator()
         {

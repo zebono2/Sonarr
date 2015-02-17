@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.Deluge
 {
-    public class DelugeSettingsValidator : AbstractValidator<DelugeSettings>
+    public class DelugeSettingsValidator : NzbDroneValidator<DelugeSettings>
     {
         public DelugeSettingsValidator()
         {

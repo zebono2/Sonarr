@@ -3,11 +3,12 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 
 namespace NzbDrone.Core.Download.Clients.Nzbget
 {
-    public class NzbgetSettingsValidator : AbstractValidator<NzbgetSettings>
+    public class NzbgetSettingsValidator : NzbDroneValidator<NzbgetSettings>
     {
         public NzbgetSettingsValidator()
         {
@@ -18,6 +19,8 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
 
             RuleFor(c => c.TvCategory).NotEmpty().When(c => !String.IsNullOrWhiteSpace(c.TvCategoryLocalPath));
             RuleFor(c => c.TvCategoryLocalPath).IsValidPath().When(c => !String.IsNullOrWhiteSpace(c.TvCategoryLocalPath));
+
+            RuleFor(c => c.TvCategory).NotEmpty().WithMessage("Using a separate category for Sonarr is recommended").AsWarning();
         }
     }
 

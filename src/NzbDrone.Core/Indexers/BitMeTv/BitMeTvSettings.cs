@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.BitMeTv
 {
-    public class BitMeTvSettingsValidator : AbstractValidator<BitMeTvSettings>
+    public class BitMeTvSettingsValidator : NzbDroneValidator<BitMeTvSettings>
     {
         public BitMeTvSettingsValidator()
         {

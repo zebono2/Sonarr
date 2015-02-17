@@ -4,10 +4,11 @@ using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
 using NzbDrone.Core.Validation.Paths;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.TorrentBlackhole
 {
-    public class TorrentBlackholeSettingsValidator : AbstractValidator<TorrentBlackholeSettings>
+    public class TorrentBlackholeSettingsValidator : NzbDroneValidator<TorrentBlackholeSettings>
     {
         public TorrentBlackholeSettingsValidator()
         {

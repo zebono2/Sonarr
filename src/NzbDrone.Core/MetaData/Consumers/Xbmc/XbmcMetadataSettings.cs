@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Metadata.Consumers.Xbmc
 {
-    public class XbmcSettingsValidator : AbstractValidator<XbmcMetadataSettings>
+    public class XbmcSettingsValidator : NzbDroneValidator<XbmcMetadataSettings>
     {
         public XbmcSettingsValidator()
         {

@@ -9,10 +9,10 @@ namespace NzbDrone.Api.DownloadClient
         {
         }
 
-        protected override void Validate(DownloadClientDefinition definition)
+        protected override void Validate(DownloadClientDefinition definition, bool includeWarnings = true)
         {
             if (!definition.Enable) return;
-            base.Validate(definition);
+            base.Validate(definition, includeWarnings);
         }
     }
 }

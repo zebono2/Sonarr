@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Prowl
 {
-    public class ProwlSettingsValidator : AbstractValidator<ProwlSettings>
+    public class ProwlSettingsValidator : NzbDroneValidator<ProwlSettings>
     {
         public ProwlSettingsValidator()
         {

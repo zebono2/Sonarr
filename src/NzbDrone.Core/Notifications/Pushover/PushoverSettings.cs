@@ -3,10 +3,11 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Pushover
 {
-    public class PushoverSettingsValidator : AbstractValidator<PushoverSettings>
+    public class PushoverSettingsValidator : NzbDroneValidator<PushoverSettings>
     {
         public PushoverSettingsValidator()
         {

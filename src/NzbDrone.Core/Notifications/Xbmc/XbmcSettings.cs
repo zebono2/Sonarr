@@ -5,10 +5,11 @@ using FluentValidation.Results;
 using Newtonsoft.Json;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Xbmc
 {
-    public class XbmcSettingsValidator : AbstractValidator<XbmcSettings>
+    public class XbmcSettingsValidator : NzbDroneValidator<XbmcSettings>
     {
         public XbmcSettingsValidator()
         {

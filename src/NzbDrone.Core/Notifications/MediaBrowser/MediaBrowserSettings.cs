@@ -4,10 +4,11 @@ using FluentValidation.Results;
 using Newtonsoft.Json;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.MediaBrowser
 {
-    public class MediaBrowserSettingsValidator : AbstractValidator<MediaBrowserSettings>
+    public class MediaBrowserSettingsValidator : NzbDroneValidator<MediaBrowserSettings>
     {
         public MediaBrowserSettingsValidator()
         {

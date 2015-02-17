@@ -3,11 +3,12 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 
 namespace NzbDrone.Core.Download.Clients.Pneumatic
 {
-    public class PneumaticSettingsValidator : AbstractValidator<PneumaticSettings>
+    public class PneumaticSettingsValidator : NzbDroneValidator<PneumaticSettings>
     {
         public PneumaticSettingsValidator()
         {

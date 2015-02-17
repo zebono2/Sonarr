@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.IPTorrents
 {
-    public class IPTorrentsSettingsValidator : AbstractValidator<IPTorrentsSettings>
+    public class IPTorrentsSettingsValidator : NzbDroneValidator<IPTorrentsSettings>
     {
         public IPTorrentsSettingsValidator()
         {
