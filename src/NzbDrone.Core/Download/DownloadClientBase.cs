@@ -87,7 +87,7 @@ namespace NzbDrone.Core.Download
                 failures.Add(new ValidationFailure(string.Empty, "Test was aborted due to an error: " + ex.Message));
             }
 
-            return new NzbDroneValidationResult(failures);
+            return new ValidationResult(failures);
         }
 
         protected abstract void Test(List<ValidationFailure> failures);

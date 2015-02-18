@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.KickassTorrents
 {
-    public class KickassTorrentsSettingsValidator : NzbDroneValidator<KickassTorrentsSettings>
+    public class KickassTorrentsSettingsValidator : AbstractValidator<KickassTorrentsSettings>
     {
         public KickassTorrentsSettingsValidator()
         {

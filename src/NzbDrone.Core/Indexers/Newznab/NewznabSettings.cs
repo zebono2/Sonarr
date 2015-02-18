@@ -11,7 +11,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.Newznab
 {
-    public class NewznabSettingsValidator : NzbDroneValidator<NewznabSettings>
+    public class NewznabSettingsValidator : AbstractValidator<NewznabSettings>
     {
         private static readonly string[] ApiKeyWhiteList =
         {

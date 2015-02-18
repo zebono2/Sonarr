@@ -3,11 +3,10 @@ using FluentValidation;
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Plex
 {
-    public class PlexClientSettingsValidator : NzbDroneValidator<PlexClientSettings>
+    public class PlexClientSettingsValidator : AbstractValidator<PlexClientSettings>
     {
         public PlexClientSettingsValidator()
         {

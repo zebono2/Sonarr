@@ -2,11 +2,10 @@
 using FluentValidation.Results;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.Omgwtfnzbs
 {
-    public class OmgwtfnzbsSettingsValidator : NzbDroneValidator<OmgwtfnzbsSettings>
+    public class OmgwtfnzbsSettingsValidator : AbstractValidator<OmgwtfnzbsSettings>
     {
         public OmgwtfnzbsSettingsValidator()
         {

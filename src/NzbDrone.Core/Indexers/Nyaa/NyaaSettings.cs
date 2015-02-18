@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.Nyaa
 {
-    public class NyaaSettingsValidator : NzbDroneValidator<NyaaSettings>
+    public class NyaaSettingsValidator : AbstractValidator<NyaaSettings>
     {
         public NyaaSettingsValidator()
         {

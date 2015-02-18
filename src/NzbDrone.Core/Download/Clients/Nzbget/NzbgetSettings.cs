@@ -8,7 +8,7 @@ using NzbDrone.Core.Validation.Paths;
 
 namespace NzbDrone.Core.Download.Clients.Nzbget
 {
-    public class NzbgetSettingsValidator : NzbDroneValidator<NzbgetSettings>
+    public class NzbgetSettingsValidator : AbstractValidator<NzbgetSettings>
     {
         public NzbgetSettingsValidator()
         {

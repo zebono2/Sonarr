@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.Torrentleech
 {
-    public class TorrentleechSettingsValidator : NzbDroneValidator<TorrentleechSettings>
+    public class TorrentleechSettingsValidator : AbstractValidator<TorrentleechSettings>
     {
         public TorrentleechSettingsValidator()
         {

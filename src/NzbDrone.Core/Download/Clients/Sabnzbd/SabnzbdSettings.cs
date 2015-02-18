@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.Sabnzbd
 {
-    public class SabnzbdSettingsValidator : NzbDroneValidator<SabnzbdSettings>
+    public class SabnzbdSettingsValidator : AbstractValidator<SabnzbdSettings>
     {
         public SabnzbdSettingsValidator()
         {

@@ -7,7 +7,7 @@ using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.Eztv
 {
-    public class EztvSettingsValidator : NzbDroneValidator<EztvSettings>
+    public class EztvSettingsValidator : AbstractValidator<EztvSettings>
     {
         public EztvSettingsValidator()
         {

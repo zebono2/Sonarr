@@ -176,12 +176,7 @@ namespace NzbDrone.Api
 
         protected void VerifyValidationResult(ValidationResult validationResult, bool includeWarnings)
         {
-            var result = validationResult as NzbDroneValidationResult;
-            
-            if (result == null)
-            {
-                result = new NzbDroneValidationResult(validationResult.Errors);
-            }
+            var result = new NzbDroneValidationResult(validationResult.Errors);
 
             if (includeWarnings && (!result.IsValid || result.HasWarnings))
             {
